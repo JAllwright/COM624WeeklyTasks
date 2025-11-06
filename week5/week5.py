@@ -5,11 +5,10 @@ from sklearn import preprocessing
 header_names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 my_data = read_csv("pima_indians_diabetes_2.csv", names=header_names)
 
-print(my_data.shape)
+print('The dimension of the initial dataframe is ', my_data.shape)
 
-empty_data = my_data[my_data.isna().any(axis=1)]
+new_data = my_data.dropna()
 
-print(empty_data)
+print('\nThe dimension of the new dataframe with dropped null values is ', new_data.shape)
 
-print(my_data.head())
-print(my_data.tail())
+print('\nThe last 5 rows of the new dataframe are ', new_data.tail(5))
