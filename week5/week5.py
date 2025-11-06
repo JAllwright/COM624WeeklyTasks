@@ -7,5 +7,7 @@ my_data = read_csv("pima_indians_diabetes_2.csv", names=header_names)
 
 print(my_data.shape)
 
+print(my_data.isna())
+
 print(my_data.head())
 print(my_data.tail())
